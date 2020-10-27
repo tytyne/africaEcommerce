@@ -7,6 +7,7 @@ class RoleSchema extends Schema {
   up () {
     this.create('roles', (table) => {
       table.increments()
+      table.enum("desc",["seller","buyer","both"])
       table.timestamps()
     })
   }

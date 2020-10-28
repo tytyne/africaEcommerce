@@ -5,8 +5,7 @@ const Role= use('App/Models/Role')
 class RegisterController {
     async register({request,auth,response}){
         
-  
-    
+
     let user = await User.create(request.all())
     //asign to a role
     await user.save()

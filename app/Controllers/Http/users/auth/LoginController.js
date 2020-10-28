@@ -19,7 +19,7 @@ class LoginController {
         }
         catch (e) {
           console.log(e)
-          return response.json({message: 'You are not registered!'})
+          return response.json({message: 'incorrect email or password!'})
         }
       }
     

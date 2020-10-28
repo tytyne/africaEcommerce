@@ -12,6 +12,7 @@ class ProductSchema extends Schema {
       table.integer("price")
       table.integer("size")
       table.string("description")
+      table.enum("currency",["FRW","US"]).defaultTo("FRW")
     
       table.timestamps()
     })

@@ -6,7 +6,7 @@ class GetProductsController {
         const user=await auth.getUser()
         const userId=user.id
      
-        const products=await Product.query().whereNot('id',user.id).fetch()
+        const products=await Product.query().whereNot('user_id',user.id).fetch()
         if(products.rows.length == 0){
             return response.status(404).json({message:"no products"})
         }    
